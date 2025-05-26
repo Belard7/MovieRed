@@ -9,7 +9,7 @@ class BienvenidaController extends Controller
 {
     public function mostrar()
 {
-    return view('bienvenida');
+    return view('welcome');
     
 }
 
