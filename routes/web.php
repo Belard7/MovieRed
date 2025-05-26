@@ -37,8 +37,8 @@ Route::middleware('auth')->group(function () {
 
 
 // Dashboard 
-Route::get('/dashboard', [PeliculaController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
